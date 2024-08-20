@@ -1,0 +1,156 @@
+.button {
+  @extend %flex-center;
+  border-radius: 100px;
+  @extend %text-link;
+  color: $colors-text-dark;
+  @extend %transition;
+  flex-shrink: 0;
+
+  @include media-mouse {
+    cursor: pointer;
+  }
+}
+
+.button-primary {
+  position: relative;
+  background-color: $colors-background-body;
+  border: none;
+
+  width: 200px;
+  height: 64px;
+
+  &>.ico {
+    position: absolute;
+    right: 64px;
+    transition: opacity 0.5s ease-out;
+    opacity: 1;
+  }
+
+  @include media-mouse {
+    &>.ico {
+      opacity: 0;
+    }
+
+    &:hover>.ico {
+      opacity: 1;
+    }
+
+    &:hover>.button-primary__text {
+      left: 64px;
+    }
+  }
+}
+
+.button-primary__text {
+  position: absolute;
+  left: 64px;
+  transition: all 0.5s ease-out;
+
+  @include media-mouse {
+    left: 78px;
+  }
+}
+
+.button-secondary {
+  background-color: transparent;
+  border: 1px solid $colors-border-dark;
+
+  width: 200px;
+  height: 44px;
+
+  @include media-mouse {
+    &:hover {
+      background-color: $colors-background-container;
+      color: $colors-text-light;
+    }
+  }
+}
+
+.button-icon {
+  background-color: transparent;
+  border: 1px solid;
+
+  width: 60px;
+  height: 60px;
+
+  &_left {
+    transform: rotate(180deg);
+  }
+
+  &_dark {
+    border-color: $colors-border-dark;
+
+    @include media-mouse {
+      &:hover {
+        background-color: $colors-background-container;
+      }
+
+      &:hover .button__ico {
+        stroke: $colors-text-light;
+      }
+    }
+  }
+
+  &_light {
+    border-color: $colors-border-light;
+
+    @include media-mouse {
+      &:hover {
+        border-color: $colors-background-body;
+        background-color: $colors-background-body;
+      }
+
+      &:hover .button__ico {
+        stroke: $colors-text-dark;
+      }
+    }
+  }
+}
+
+.button-store {
+  border: 1px solid $colors-border-dark;
+  background-color: transparent;
+
+  width: 200px;
+  height: 64px;
+
+  @include media-mouse {
+    &:hover {
+      background-color: $colors-background-container;
+      color: $colors-text-light;
+    }
+
+    &:hover .button__ico {
+      fill: $colors-text-light;
+    }
+  }
+}
+
+.button-store__column-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 110px;
+}
+
+.button-store__available {
+  @extend %text-caption;
+}
+
+.button-store__name-store {
+  @extend %text-link;
+}
+
+.button-refresh {
+  display: none;
+  margin-top: 40px;
+
+  @include media-tablet {
+    // display: flex;
+
+    &_hide{
+      display: none !important;
+    }
+  }
+}

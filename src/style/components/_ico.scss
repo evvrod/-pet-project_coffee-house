@@ -1,0 +1,49 @@
+.ico {
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.ico_menu {
+  width: 20px;
+  height: 20px;
+}
+
+.ico_burger {
+  width: 40px;
+  height: 40px;
+}
+
+.ico_contacts {
+  width: 20px;
+  height: 20px;
+}
+
+.ico-arrow {
+  width: 24px;
+  height: 24px;
+  stroke: $colors-text-dark;
+
+}
+
+.ico-store {
+  width: 36px;
+  height: 36px;
+
+}
+
+.ico-social {
+  width: 24px;
+  height: 24px;
+  stroke: $colors-text-light;
+}
+
+.ico-refresh{
+  width: 24px;
+  height: 24px;
+  stroke: $colors-text-dark;
+}
+
+.ico_info-empty{
+  width: 16px;
+  height: 16px;
+}

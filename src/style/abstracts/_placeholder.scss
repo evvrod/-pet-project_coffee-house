@@ -1,0 +1,46 @@
+%main-font {
+  font-family: 'Inter', sans-serif;
+}
+
+%transition {
+  transition: background 0.7s ease-out;
+}
+
+%text-link {
+  @extend %main-font;
+  // font-family: 'Inter', sans-serif;
+  @include font($size: 16px, $height: 150%, $weight: 600);
+}
+
+%text-burger-link {
+  @extend %main-font;
+  // font-family: 'Inter', sans-serif;
+  @include font($size: 32px, $height: 125%, $weight: 600);
+}
+
+%text-medium {
+  @extend %main-font;
+  @include font($size: 16px, $height: 150%, $weight: 400);
+}
+
+%text-medium_light {
+  @extend %text-medium;
+  color: $colors-text-light;
+}
+
+%text-caption {
+  @extend %main-font;
+  @include font($size: 10px, $height: 140%, $weight: 600);
+}
+
+%flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

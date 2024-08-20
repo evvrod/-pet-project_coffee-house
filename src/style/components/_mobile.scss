@@ -1,0 +1,43 @@
+.mobile__wrapper {
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+
+  @media (max-width:1130px) {
+    flex-wrap: wrap;
+  }
+
+  @include media-tablet {
+    @include adaptiv-gap(100, 40, $width-tablet, $width-mobile);
+  }
+}
+
+.mobile__info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 630px;
+
+  @include media-tablet {
+    max-width: 688px;
+  }
+}
+
+.mobile__text {
+  @extend %text-medium;
+}
+
+.mobile__image {
+  max-width: 630px;
+  width: 100%;
+  flex-shrink: 1;
+
+  @include media-tablet {
+    margin: 0 auto;
+  }
+
+}
+
+.mobile__buttons {
+  flex-wrap: wrap;
+}

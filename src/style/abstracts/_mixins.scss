@@ -1,0 +1,63 @@
+@mixin font ($size, $height, $weight, $style: normal) {
+  font-size: $size;
+  font-style: $style;
+  font-weight: $weight;
+  line-height: $height;
+}
+
+@mixin media-pc {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (max-width: $width-tablet) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: $width-mobile) {
+    @content;
+  }
+}
+
+@mixin media-mouse {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: 768 - 380;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 380px) / #{$maxWidth}));
+}
+
+@mixin adaptiv-padding($pcSizeY, $mobSizeY, $pcSizeX, $mobSizeX, $startWidth, $finishWidth) {
+  $addSizeY: $pcSizeY - $mobSizeY;
+  $addSizeX: $pcSizeX - $mobSizeX;
+  $maxWidth: calc($startWidth / 1px - $finishWidth / 1px);
+
+  padding: calc(#{$mobSizeY + px} + #{$addSizeY} * ((100vw - $finishWidth) / #{$maxWidth})) calc(#{$mobSizeX + px} + #{$addSizeX} * ((100vw - $finishWidth) / #{$maxWidth}));
+}
+
+@mixin adaptiv-margin($startSize, $finishSize, $top-bottom) {
+  $addSize: $startSize - $finishSize;
+  $maxWidth: 768 - 380;
+  margin: $top-bottom calc(#{$finishSize + px} + #{$addSize} * ((100vw - 380px) / #{$maxWidth}));
+}
+
+@mixin adaptiv-gap($startSize, $finishSize, $startWidth, $finishWidth) {
+  $addSize: $startSize - $finishSize;
+  $maxWidth: calc($startWidth / 1px - $finishWidth / 1px);
+  gap: calc(#{$finishSize + px} + #{$addSize} * ((100vw - $finishWidth) / #{$maxWidth}));
+}
+
+@mixin column-gap($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}

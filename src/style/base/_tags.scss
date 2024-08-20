@@ -1,0 +1,51 @@
+.tags {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  @extend %text-link;
+  
+  @include media-tablet {
+    @include adaptiv-gap(16, 8, $width-tablet, $width-mobile);
+  }
+}
+
+.tag {
+  padding: 7px 15px 7px 7.5px;
+  border-radius: 100px;
+  border: 1px solid $colors-border-light;
+  @extend %text-link;
+  color: $colors-text-dark;
+  background-color: transparent;
+
+  @extend %transition;
+  align-items: center;
+
+  @include media-mouse {
+    cursor: pointer;
+
+    &:hover {
+      background: $colors-background-container;
+      color: $colors-text-light;
+    }
+  }
+
+  &_active {
+    background: $colors-background-container;
+    color: $colors-text-light;
+    // cursor: default;
+
+    &>.tag__circle {
+      background: $colors-background-body;
+      color: $colors-text-dark;
+    }
+  }
+}
+
+.tag__circle {
+  border-radius: 100px;
+  background: $colors-border-light;
+  height: 30px;
+  width: 30px;
+
+  @extend %flex-center;
+}

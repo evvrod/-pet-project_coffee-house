@@ -1,0 +1,99 @@
+html {
+  scroll-behavior: smooth;
+
+}
+
+.body__wrapper {
+  background-color: $colors-background-body;
+  position: relative;
+  overflow: clip;
+}
+
+body {
+  background-color: $colors-background-body;
+  color: $colors-text-dark;
+  @extend %main-font;
+
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.h1 {
+  @extend %main-font;
+
+  @include font($size: 72px, $height: 105%, $weight: 600);
+  color: $colors-text-light;
+
+  &_accented {
+    font-style: italic;
+    color: $colors-text-accent;
+  }
+
+  @include media-tablet {
+    @include adaptiv-font(72, 42);
+  }
+
+  @include media-mobile {
+    @include font($size: 42px, $height: 115%, $weight: 600);
+  }
+}
+
+.h2 {
+  @extend %main-font;
+  @include font($size: 60px, $height: 125%, $weight: 600);
+
+  &_accented {
+    font-style: italic;
+    color: $colors-text-accent;
+  }
+
+  @include media-tablet {
+    @include adaptiv-font(60, 32);
+  }
+
+  @include media-mobile {
+    @include font($size: 32px, $height: 125%, $weight: 600);
+  }
+}
+
+.h3 {
+  @extend %main-font;
+  @include font($size: 24px, $height: 125%, $weight: 600);
+
+  &_accented {
+    font-style: italic;
+  }
+}
+
+.text-burger {
+  @extend %main-font;
+  @include font($size: 32px, $height: 125%, $weight: 600);
+}
+
+object {
+  @include media-mouse {
+    cursor: pointer;
+  }
+}
+
+@include media-tablet {
+  br {
+    display: none;
+  }
+}
+
+.video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1360;
+}
+
+.lock{
+  overflow-y: hidden;
+}

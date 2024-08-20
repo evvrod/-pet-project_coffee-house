@@ -1,0 +1,62 @@
+.footer__wrapper {
+  padding: 100px 0 40px 0;
+
+}
+
+.footer__rec {
+  padding: 100px;
+  background-color: $colors-background-container;
+  border-radius: 40px;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  @media (max-width: 980px) {
+    flex-wrap: wrap;
+  }
+
+  @include media-pc {
+    @include adaptiv-padding(100, 100, 100, 60, $width, $width-tablet);
+  }
+
+  @include media-tablet {
+    @include adaptiv-padding(100, 60, 60, 16, $width-tablet, $width-mobile);
+    @include adaptiv-gap(100, 40, $width-tablet, $width-mobile);
+    // padding: 100px 60px;
+  }
+
+  @include media-mobile {
+    padding: 60px 16px;
+    gap: 40px;
+  }
+}
+
+.footer__column {
+  flex-basis: 530px;
+  min-width: 300px;
+}
+
+.footer__titles {
+  color: $colors-text-light;
+}
+
+.footer__contact-text {
+  color: $colors-text-light;
+  @extend %text-link;
+}
+
+.footer__contact-items {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer__contact-items>div {
+  padding: 2px 0 2px 0;
+}
+
+.footer__buttons {
+  padding-top: 40px;
+  display: flex;
+  gap: 12px;
+}

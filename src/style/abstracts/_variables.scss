@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+$width: 1440px;
+$content-width: 1360px;
+$width-tablet: 768px;
+$content-width-tablet: 688px;
+$width-mobile: 380px;
+$content-width-mobile: 348px;
+
+// $content-width: 800px;
+
+$colors-text-dark: #403F3D;
+$colors-text-light: #E1D4C9;
+$colors-text-accent: #B0907A;
+
+$colors-background-body: #E1D4C9;
+$colors-background-container: #665F55;
+$colors-background-backdrop: rgba(64, 63, 61, 0.8);
+
+$colors-border-light: #C1B6AD;
+$colors-border-dark: #665F55;
+

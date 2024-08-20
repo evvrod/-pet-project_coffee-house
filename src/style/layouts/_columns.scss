@@ -1,0 +1,29 @@
+.two-columns {
+  display: flex;
+
+  &_gap8 {
+    gap: 8px;
+  }
+
+  &_gap16 {
+    gap: 16px;
+  }
+
+  &_gap20 {
+    gap: 20px;
+  }
+
+  &_gap40{
+    gap: 40px;
+  }
+
+  &_gap100 {
+    gap: 100px;
+  }
+}
+
+.three-columns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

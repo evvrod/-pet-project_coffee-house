@@ -1,0 +1,32 @@
+.header {
+  padding: 20px 0;
+  position: relative;
+}
+
+.header__logo {
+  height: 60px;
+  width: 100px;
+}
+
+.navigation {
+  display: flex;
+  gap: 40px;
+
+  &>li {
+    list-style: none;
+  }
+
+  @include media-tablet {
+    display: none;
+  }
+}
+
+.header__menu {
+  @include media-tablet {
+    display: none;
+  }
+
+  @include media-mobile {
+    display: none;
+  }
+}

@@ -1,0 +1,26 @@
+@import 'style/abstracts/variables';
+@import 'style/abstracts/mixins';
+@import 'style/abstracts/placeholder';
+
+@import 'style/base/base';
+@import 'style/base/fonts';
+@import 'style/base/button';
+@import 'style/base/links';
+@import 'style/base/tags';
+
+@import 'style/layouts/wrapper';
+@import 'style/layouts/columns';
+@import 'style/layouts/header';
+@import 'style/layouts/footer';
+
+
+
+@import 'style/components/logo';
+@import 'style/components/ico';
+@import 'style/components/enjoy';
+@import 'style/components/favorites-coffee';
+@import 'style/components/about';
+@import 'style/components/mobile';
+@import 'style/components/menu';
+@import 'style/components/modal';
+@import 'style/components/burger-menu';
